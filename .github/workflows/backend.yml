@@ -20,5 +20,5 @@ jobs:
 
       - name: Build and push backend
         run: | 
-          docker build -f DockerFile -t rg.fr-par.scw.cloud/namespace-botros-john/back:latest ./back
+          docker build -f ./back/DockerFile -t rg.fr-par.scw.cloud/namespace-botros-john/back:latest back
           docker push rg.fr-par.scw.cloud/namespace-botros-john/back:latest

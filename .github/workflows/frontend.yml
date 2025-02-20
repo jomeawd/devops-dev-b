@@ -20,5 +20,5 @@ jobs:
 
       - name: Build and push frontend
         run: |
-          docker build -f DockerFile -t rg.fr-par.scw.cloud/namespace-botros-john/front:latest ./front
+          docker build -f ./front/DockerFile -t rg.fr-par.scw.cloud/namespace-botros-john/front:latest front
           docker push rg.fr-par.scw.cloud/namespace-botros-john/front:latest
