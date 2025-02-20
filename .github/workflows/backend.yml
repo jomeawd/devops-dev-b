@@ -19,6 +19,6 @@ jobs:
         run: echo "${{ secrets.SCW_SECRET_KEY }}" | docker login rg.fr-par.scw.cloud/namespace-botros-john -u nologin --password-stdin
 
       - name: Build and push backend
-        run: |
+        run: | 
           docker build -f DockerFile -t rg.fr-par.scw.cloud/namespace-botros-john/back:latest ./back
           docker push rg.fr-par.scw.cloud/namespace-botros-john/back:latest
