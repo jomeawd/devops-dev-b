@@ -1,0 +1,29 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./back
+      dockerfile: DockerFile
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=file:./dev.db
+    networks:
+      - app-network
+    command: >
+      sh -c "npx prisma generate && npm start"
+
+  frontend:
+    build:
+      context: ./front
+      dockerfile: DockerFile
+      args:
+        - VITE_API_URL=http://localhost:3000
+    ports:
+      - "80:80"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

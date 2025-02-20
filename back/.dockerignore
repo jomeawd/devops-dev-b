@@ -1,0 +1,23 @@
+# Ignorer les dossiers node_modules (ils seront installés dans le container)
+node_modules/
+
+# Ignorer les fichiers de log
+*.log
+
+# Ignorer les fichiers et répertoires de configuration locaux
+
+.git/
+.gitignore
+DockerFile
+
+# Ignorer les fichiers générés par l'éditeur (ex: VSCode)
+.vscode/
+.idea/
+
+# Ignorer les fichiers spécifiques au système d'exploitation (par exemple macOS ou Windows)
+.DS_Store
+Thumbs.db
+
+# Ignorer les dossiers de build
+dist/
+build/
